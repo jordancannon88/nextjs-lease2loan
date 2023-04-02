@@ -2,11 +2,11 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import { getProviders, signIn, signOut, useSession } from 'next-auth/react'
 import Navigation from '@/components/Navigation'
-import WelcomeSplash from '@/components/WelcomeSplash'
+import Contact from '@/components/Contact'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Settings() {
   const { data: session, status } = useSession()
   const loading = status === "loading"
 
@@ -22,7 +22,7 @@ export default function Home() {
       <div className="dark:bg-black h-screen">
         <Navigation />
         <div className="container mx-auto px-4 dark:text-white">
-          <WelcomeSplash />
+          <Contact />
         </div>
       </div>
     </>
